@@ -28,3 +28,12 @@ function square(number) {
 }
 
 console.log(square(2));
+
+const messageBox = document.querySelector("#helloName");
+
+const greetMe = () => {
+  let hello = prompt("Whats your name ?");
+  messageBox.textContent = `Hello ${hello}`;
+};
+
+greetMe();
