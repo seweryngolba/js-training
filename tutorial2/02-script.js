@@ -12,3 +12,7 @@ console.log(anyName.charAt(Math.floor(Math.random() * anyName.length)));
 
 let name = prompt("Enter your name");
 console.log(name ?? "You didnt enter your name");
+
+const textP = (document.querySelector("#textP").textContent = anyName.charAt(
+  Math.floor(Math.random() * anyName.length)
+));
