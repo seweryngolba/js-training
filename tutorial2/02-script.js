@@ -1,18 +1,28 @@
-let myVariable = "Original";
+let playGame = confirm("Shall we play rock,paper or scissors ?");
 
-let newVariable = myVariable.replace("n", "N");
-
-console.log(newVariable);
-
-console.log(Math.floor(Math.random() * 100) + 1);
-
-const anyName = "Jonathan";
-
-console.log(anyName.charAt(Math.floor(Math.random() * anyName.length)));
-
-let name = prompt("Enter your name");
-console.log(name ?? "You didnt enter your name");
-
-const textP = (document.querySelector("#textP").textContent = anyName.charAt(
-  Math.floor(Math.random() * anyName.length)
-));
+if (playGame) {
+  //play
+  let playerChoice = prompt("Please enter rock,paper or scissors.");
+  if (playerChoice) {
+    let playerOne = playerChoice.trim().toLowerCase();
+    if (
+      playerOne === "rock" ||
+      playerOne === "paper" ||
+      playerOne === "scissors"
+    ) {
+      let computerChoice = Math.floor(Math.random() * 3 + 1);
+      let computer =
+        computerChoice === 1
+          ? "rock"
+          : computerChoice === 2
+          ? "paper"
+          : "scissors";
+    } else {
+      alert("You didnt enter rock,paper or scissors");
+    }
+  } else {
+    alert("Guess you change your mind!");
+  }
+} else {
+  alert("Okay,maybe next time");
+}
