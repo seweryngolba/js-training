@@ -86,3 +86,24 @@ function myFunc() {
 }
 
 myFunc();
+
+const myArray = [];
+
+myArray[0] = "Dave";
+myArray[1] = 1000;
+myArray[2] = false;
+
+console.log(myArray);
+console.log(myArray.length);
+
+myArray.push("school");
+console.log(myArray);
+
+const lastItem = myArray.pop();
+console.log(lastItem);
+
+myArray.unshift(42);
+console.log(myArray);
+
+myArray.shift();
+console.log(myArray);
